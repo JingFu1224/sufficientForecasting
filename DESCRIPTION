@@ -44,3 +44,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/JingFu1224/sufficientForecasting
+BugReports: https://github.com/JingFu1224/sufficientForecasting/issues

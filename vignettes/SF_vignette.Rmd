@@ -1,0 +1,72 @@
+---
+title: "SF_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{SF_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(sufficientForecasting)
+```
+
+# 1. Motivation
+Forecasting a single time series using high dimensional predictors has received 
+a lot of interests in macroeconomics, finance, business and many other research
+fields. It is usually reasonable to assume that a few underlying common factors
+drive the forecasting target and the high-dimensional predictors. The use of principal
+components effectively reduces the dimensionality and more importantly provides
+a useful characterization of predictors. 
+
+By assuming the linear forecasting function, Stock and Watson (1989, 2002a, 2002b)
+demonstrated the validity of the estimated principal components in forecasting.
+Bai and Ng (2006) conducted inferences on factor-augmented regressions to enable 
+the forecast. Bair et al. (2006) applied the correlation screening to obtain
+relevant predictors, and Bai and Ng (2008)  established the thresholding criteria 
+to rule out predictors not informative for the target.
+
+However, all of the aforementioned works may not perform well when the target and
+the latent factors have possibly nonlinear relationship. The possibly nonlinear
+and nonseparable forecasting function poses a significant challenge when extracting
+the information relevant to the target. The package provides sufficient forecasting
+(SF) procedure to make predictions. SF procedure obtains sufficient predictive indices
+with provable theoretical guarantees, allowing for an unknown nonlinear forecasting 
+function.
+
+# 2. Examples
+## 2.1 Data
+The package contains existing datasets: `dataExample$y`, `dataExample$X`, and `dataExample$newX`. y is a 100 by 1 matrix, X is a 100 by 100 matrix. X and y 
+are our training sets. Our goal is to predict what the value of y is when we 
+know next predictors are newX.
+
+## 2.2 SF.SIR
+We can use SF.SIR to forecast.
+```{r}
+SF.SIR(y=dataExample$y,X=dataExample$X,newX=dataExample$newX)
+```
+
+## 2.3 SF.DR
+Also, We can use SF.DR.
+```{r}
+SF.DR(y=dataExample$y,X=dataExample$X,newX=dataExample$newX)
+```
+
+# References
+Bai, J. , and Ng, S. (2006), Confidence intervals for diffusion index forecasts and inference for factor-augmented regressions, *Econometrica* 74(4), 1133–1150.
+
+Bai, J. , and Ng, S. (2008), Forecasting economic time series using targeted predictors, *Journal of Econometrics* 146, 304–317.
+
+Bair, E. , Hastie, T. , Paul, D. , and Tibshirani, R. (2006), Prediction by supervised principal components, *Journal of the American Statistical Association* 101, 119–137.
+
+Stock, J. H. , and Watson, M. W. (1989), New indexes of coincident and leading economic indicators, *NBER Macroeconomics Annual* 4, 351–409.
+
+Stock, J. H. , and Watson, M. W. (2002a), Forecasting using principal components from a large number of predictors, *Journal of the American Statistical Association* 97, 1167–1179. 
+
+Stock, J. H. , and Watson, M. W. (2002b), Macroeconomic forecasting using diffusion indexes, *Journal of Business & Economic Statistics* 20, 147–162.

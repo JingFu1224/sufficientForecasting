@@ -1,0 +1,46 @@
+Package: sufficientForecasting
+Type: Package
+Title: Sufficient Forecasting using Factor Models
+Version: 0.1.0
+Authors@R: c(person(given = "Jianqing", 
+           family = "Fan",
+           role = "aut"),
+           person(given = "Jing", 
+           family = "Fu",
+           email = "jingfu991224@outlook.com",
+           role = c("aut","cre")),
+           person(given = "Wei", 
+           family = "Luo",
+           role = "aut"),
+           person(given = "Lingzhou", 
+           family = "Xue",
+           role = "aut"),
+           person(given = "Jiawei", 
+           family = "Yao",
+           role = "aut"),
+           person(given = "Xiufan", 
+           family = "Yu",
+           role = "aut")
+           )
+Description: This package implements the sufficient forecasting (SF) method for 
+    a single time series forecasting using many predictors and a possibly nonlinear 
+    forecasting function. Assuming that the predictors are driven by some latent 
+    factors, the SF first conducts factor analysis and then performs sufficient 
+    dimension reduction on the estimated factors to derive predictive indices for 
+    forecasting. The package implements several dimension reduction approaches, 
+    including principal components (PC), sliced inverse regression (SIR), and 
+    directional regression (DR).
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Imports: 
+    gam,
+    stats
+Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

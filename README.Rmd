@@ -1,0 +1,46 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# sufficientForecasting
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+## Overview
+
+The goal of sufficientForecasting is to forecast a single time series when there is a large number of predictors and a possible nonlinear effect.
+
+## Installation
+
+You can install the development version of sufficientForecasting like so:
+
+``` r
+# The easiest way to install sufficientForecasting
+install.packages("sufficientForecasting")
+```
+
+## Usage
+
+The following example uses SF.CI to solve a problem: forecast a single time series, 
+and its upper bound and lower bound
+
+```{r example}
+library(sufficientForecasting)
+## basic example code
+SF.CI(y=dataExample$y,X=dataExample$X,newX=dataExample$newX,type="LLM",alpha = 0.05)
+```
+
+

@@ -20,6 +20,8 @@ so:
 ``` r
 # The easiest way to install sufficientForecasting
 install.packages("sufficientForecasting")
+# OR
+devtools::install_github("JingFu1224/sufficientForecasting")
 ```
 
 ## Usage

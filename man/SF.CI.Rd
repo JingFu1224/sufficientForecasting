@@ -41,7 +41,7 @@ K (default = 1)}
 A list with components
 \describe{
 \item{yhat}{Out-of-sample forecast for \code{newX}; or in-sample forecast
-for the lastobserved data point if \code{newX} is \code{NULL}}
+for the last observed data point if \code{newX} is \code{NULL}}
 \item{ci_lower}{Lower bound of conformal interval}
 \item{ci_upper}{Upper bound of conformal interval}
 }

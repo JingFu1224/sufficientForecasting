@@ -6,7 +6,15 @@
 \alias{sufficientForecasting-package}
 \title{sufficientForecasting: Sufficient Forecasting using Factor Models}
 \description{
-This package implements the sufficient forecasting (SF) method for a single time series forecasting using many predictors and a possibly nonlinear forecasting function. Assuming that the predictors are driven by some latent factors, the SF first conducts factor analysis and then performs sufficient dimension reduction on the estimated factors to derive predictive indices for forecasting. The package implements several dimension reduction approaches, including principal components (PC), sliced inverse regression (SIR), and directional regression (DR).
+The sufficient forecasting (SF) method is implemented by this package for a single time series forecasting using many predictors and a possibly nonlinear forecasting function. Assuming that the predictors are driven by some latent factors, the SF first conducts factor analysis and then performs sufficient dimension reduction on the estimated factors to derive predictive indices for forecasting. The package implements several dimension reduction approaches, including principal components (PC), sliced inverse regression (SIR), and directional regression (DR).
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/JingFu1224/sufficientForecasting}
+  \item Report bugs at \url{https://github.com/JingFu1224/sufficientForecasting/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Jing Fu \email{jingfu991224@outlook.com}

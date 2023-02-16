@@ -22,7 +22,7 @@ Authors@R: c(person(given = "Jianqing",
            family = "Yu",
            role = "aut")
            )
-Description: This package implements the sufficient forecasting (SF) method for 
+Description: The sufficient forecasting (SF) method is implemented by this package for 
     a single time series forecasting using many predictors and a possibly nonlinear 
     forecasting function. Assuming that the predictors are driven by some latent 
     factors, the SF first conducts factor analysis and then performs sufficient 

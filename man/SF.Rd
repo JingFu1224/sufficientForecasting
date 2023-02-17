@@ -49,10 +49,8 @@ Select a method from PC, SIR and DR to do point prediction
 utils::data(dataExample,package = "sufficientForecasting")
 SF(dataExample$y,dataExample$X,method = "SIR.LLM",
 hyperparameter = list(nslices = 5,discretization = TRUE))
-\dontrun{
 SF(dataExample$y,dataExample$X,dataExample$newX,method = "DR")
 SF(dataExample$y,dataExample$X,dataExample$newX,method = "PC")
-}
 }
 \references{
 Fan, J., Xue, L. and Yao, J. (2017), Sufficient forecasting using factor models,

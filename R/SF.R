@@ -34,10 +34,8 @@
 #' utils::data(dataExample,package = "sufficientForecasting")
 #' SF(dataExample$y,dataExample$X,method = "SIR.LLM",
 #' hyperparameter = list(nslices = 5,discretization = TRUE))
-#' \dontrun{
 #' SF(dataExample$y,dataExample$X,dataExample$newX,method = "DR")
 #' SF(dataExample$y,dataExample$X,dataExample$newX,method = "PC")
-#' }
 SF <- function(y, X, newX = NULL, K = "default", L = 1,
                         method = "SIR.LM", hyperparameter = list()){
   # hyperparameters
